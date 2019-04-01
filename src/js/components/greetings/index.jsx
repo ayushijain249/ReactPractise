@@ -6,14 +6,17 @@ export default class Greetings extends Component{
     constructor(){
         super();
         this.state = {
-            name: "Ayushi Jain",
-            proposedName: ""
+            name: "Ayushi Jain"
         };
      }
 
-    handleInput = (event) => this.setState({proposedName: event.target.value})
+    handleInput = (event) => {
+        this.newName = event.target.value 
+    }
+    //this.setState({proposedName: event.target.value})
 
-    handleChange = () => this.setState({name: this.state.proposedName})
+    handleChange = () => this.setState({name: this.newName})
+        //this.state.proposedName})
 
     render(){
         console.log("there is a change");
