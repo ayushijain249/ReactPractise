@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import DisplayName from "./DisplayName.jsx";
 
 export default class Greetings extends Component{
-        
+    
     constructor(){
         super();
         this.state = {
@@ -13,9 +13,12 @@ export default class Greetings extends Component{
     handleInput = (event) => {
         this.newName = event.target.value 
     }
-    //this.setState({proposedName: event.target.value})
+    //this.setState({proposedName: event.target.value}) // this was calling render again and again
 
-    handleChange = () => this.setState({name: this.newName})
+    handleChange = () => {
+        
+        this.setState({name: this.newName})
+    }
         //this.state.proposedName})
 
     render(){
