@@ -1,7 +1,7 @@
 import React from "react";
 
-const ListItem = ({itemValue}) => (
-    <li key={itemValue}>{itemValue}</li>
+const ListItem = ({itemValue,index}) => (
+    <li>{itemValue}</li>
 );
 
 export default ListItem;
