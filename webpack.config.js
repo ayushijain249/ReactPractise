@@ -24,5 +24,12 @@ module.exports = {
       template: "./src/index.html",
       filename: "./index.html"
     })
-  ]
-};
+  ],
+  devServer:{
+    proxy:[{
+      context:["/auth","/api"],
+      target: "http://localhost:1234"
+    }],
+    open: 'Google Chrome'
+  }
+}
